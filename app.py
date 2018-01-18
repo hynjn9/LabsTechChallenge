@@ -2,9 +2,12 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def main():
+    return render_template('index.html')
 
 @app.route('/hk2827', methods=['GET'])
-def main():
+def my_page():
     return render_template('mypage.html')
 
 
